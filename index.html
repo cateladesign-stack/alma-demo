@@ -1,0 +1,410 @@
+<!doctype html>
+<html lang="pt">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ALMA · Skin Ritual Wellbeing — Estética Facial em Olhão</title>
+<meta name="description" content="ALMA — estética facial personalizada e não invasiva em Olhão. Skin Rituals com ARTISTRY, SAM, LEDterapia e Derma Architect.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500&family=Inter:wght@300;400;500&family=Libre+Caslon+Text:ital@0;1&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#f2f0eb; --sand:#e8e1d5; --ink:#2b2824; --muted:#6f6a62;
+  --gold:#b09a79; --sage:#757c6d; --line:rgba(43,40,36,.14);
+  --serif:'Libre Caslon Text',Georgia,serif; --sans:'Inter',system-ui,sans-serif;
+  --r:22px; --pad:clamp(16px,3vw,30px);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--ink);font:400 16px/1.7 var(--sans);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+em,.it{font-family:var(--serif);font-style:italic;font-weight:400}
+.wrap{max-width:1380px;margin:0 auto;padding:0 var(--pad)}
+.eyebrow{font-size:13px;letter-spacing:.28em;text-transform:uppercase;color:var(--gold);font-weight:500}
+h1,h2,h3,h4{font-weight:400;letter-spacing:-.02em;line-height:1.08}
+h2{font-size:clamp(34px,4.6vw,64px)}
+h2 em{color:var(--gold)}
+.lead{font-size:18px;color:var(--muted);max-width:560px}
+.arrow{display:inline-block;width:28px;height:10px;position:relative}
+.arrow::before{content:"";position:absolute;left:0;right:2px;top:50%;height:1px;background:currentColor}
+.arrow::after{content:"";position:absolute;right:1px;top:50%;width:8px;height:8px;border-top:1px solid currentColor;border-right:1px solid currentColor;transform:translateY(-50%) rotate(45deg)}
+.btn{display:inline-flex;align-items:center;gap:14px;padding:14px 26px;border-radius:999px;font-size:15px;font-weight:500;transition:.3s}
+.btn-sage{background:var(--sage);color:#fff}.btn-sage:hover{background:var(--ink)}
+.btn-line{border:1px solid var(--line)}.btn-line:hover{background:var(--ink);color:#fff;border-color:var(--ink)}
+.circle{width:164px;height:164px;border-radius:50%;border:1px solid rgba(255,255,255,.75);display:grid;place-content:center;text-align:center;color:#fff;font-weight:500;gap:6px;transition:.4s;backdrop-filter:blur(2px)}
+.circle .arrow{margin:0 auto}
+.circle:hover{background:rgba(255,255,255,.15);transform:scale(1.05)}
+
+/* header */
+header{position:sticky;top:0;z-index:50;background:rgba(242,240,235,.88);backdrop-filter:blur(12px)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:96px}
+.logo{font-family:'Cormorant Garamond',serif;font-size:38px;letter-spacing:.14em;line-height:1;color:#8c7656}
+.logo small{display:block;font-family:var(--sans);font-size:9px;letter-spacing:.42em;color:var(--muted);margin-top:4px}
+.menu{display:flex;gap:42px;font-size:16px}
+.menu a{position:relative;padding:6px 0}
+.menu a::after{content:"";position:absolute;left:0;bottom:0;width:0;height:1px;background:var(--ink);transition:.3s}
+.menu a:hover::after{width:100%}
+.burger{display:none;background:none;border:0;width:40px;height:40px;cursor:pointer}
+.burger span{display:block;height:1px;background:var(--ink);margin:7px 6px}
+
+/* hero */
+.hero{position:relative;margin:0 var(--pad);height:calc(100vh - 110px);min-height:620px;border-radius:var(--r);overflow:hidden;display:grid;grid-template-columns:1fr 1fr}
+.hero img{width:100%;height:100%;object-fit:cover}
+.hero .l img{object-position:30% 30%}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(40,30,20,.15),rgba(40,30,20,.35))}
+.hero-c{position:absolute;inset:0;z-index:2;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;color:#fff;padding:0 20px}
+.hero-c .eyebrow{color:#fff;margin-bottom:22px}
+.hero-c h1{font-size:clamp(46px,6.4vw,92px)}
+.hero-c h1 em{display:block}
+.hero-c p{font-size:19px;max-width:440px;margin:30px 0 42px;opacity:.95}
+
+/* intro features */
+.intro{padding:120px 0 90px;display:grid;grid-template-columns:1.1fr 1fr;gap:60px;align-items:end}
+.feat{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--line);margin-top:70px}
+.feat div{padding:34px 30px 0 0}
+.feat h4{font-size:20px;margin-bottom:10px}
+.feat p{color:var(--muted);font-size:15px}
+
+/* marquee */
+.marq{overflow:hidden;padding:30px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.marq-t{display:flex;gap:70px;width:max-content;animation:mq 34s linear infinite}
+.marq-t span{font-size:clamp(46px,7vw,104px);letter-spacing:-.03em;white-space:nowrap;line-height:1.1}
+.marq-t span:nth-child(3n+2){font-family:var(--serif);font-style:italic;color:var(--gold)}
+.marq-t span:nth-child(3n){color:var(--sage)}
+@keyframes mq{to{transform:translateX(-50%)}}
+
+/* rituals */
+.rituals{padding:130px 0}
+.r-head{display:flex;justify-content:space-between;align-items:end;gap:40px;margin-bottom:60px;flex-wrap:wrap}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.card{position:relative;border-radius:var(--r);overflow:hidden;aspect-ratio:4/5;cursor:pointer;color:#fff;background:var(--sand)}
+.card img{width:100%;height:100%;object-fit:cover;transition:transform 1.2s cubic-bezier(.2,.7,.2,1)}
+.card:hover img{transform:scale(1.06)}
+.card::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 40%,rgba(30,22,14,.72))}
+.card .tag{position:absolute;top:20px;left:20px;z-index:2;font-size:12px;letter-spacing:.14em;text-transform:uppercase;padding:7px 14px;border-radius:999px;background:rgba(255,255,255,.18);border:1px solid rgba(255,255,255,.5);backdrop-filter:blur(8px)}
+.card .glass{position:absolute;left:16px;right:16px;bottom:16px;z-index:2;padding:24px 24px 22px;border-radius:16px;border:1px solid rgba(255,255,255,.35);background:rgba(255,255,255,.1);backdrop-filter:blur(14px)}
+.card h3{font-size:28px;margin-bottom:6px}
+.card .sub{font-size:14px;opacity:.9}
+.card .meta{display:flex;justify-content:space-between;align-items:center;margin-top:16px;padding-top:14px;border-top:1px solid rgba(255,255,255,.3);font-size:15px}
+.card .price{font-family:var(--serif);font-size:24px}
+.card.feature,.card:last-child{grid-column:span 2;aspect-ratio:auto}
+.card.feature h3{font-size:40px}
+
+/* benefit */
+.benefit{margin:0 var(--pad);border-radius:var(--r);overflow:hidden;position:relative;display:grid;grid-template-columns:1fr 1fr;min-height:640px}
+.benefit img{width:100%;height:100%;object-fit:cover}
+.benefit .orb{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:min(560px,86vw);aspect-ratio:1;border-radius:50%;border:1px solid rgba(255,255,255,.55);background:rgba(120,95,70,.25);backdrop-filter:blur(22px);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;color:#fff;padding:60px}
+.orb .big{font-size:clamp(56px,7vw,96px);line-height:1}
+.orb .big em{display:block;font-size:.5em;margin-top:6px}
+.orb p{max-width:340px;margin:22px 0 10px;font-size:16px}
+.orb ul{list-style:none;display:flex;gap:10px;flex-wrap:wrap;justify-content:center;margin:12px 0 26px}
+.orb li{font-size:13px;border:1px solid rgba(255,255,255,.55);border-radius:999px;padding:6px 14px}
+.orb small{opacity:.8;font-size:12px;max-width:300px}
+
+/* about */
+.about{padding:140px 0;display:grid;grid-template-columns:.9fr 1.1fr;gap:clamp(40px,7vw,110px);align-items:center}
+.about .ph{position:relative;border-radius:var(--r);overflow:hidden;aspect-ratio:4/5}
+.about .ph img{width:100%;height:100%;object-fit:cover}
+.about .ph .sig{position:absolute;bottom:22px;left:22px;color:#fff;font-family:var(--serif);font-style:italic;font-size:28px}
+.about p{color:var(--muted);margin-top:20px;font-size:17px;max-width:600px}
+.about p strong{color:var(--ink);font-weight:500}
+.about blockquote{margin-top:34px;font-family:var(--serif);font-style:italic;font-size:26px;line-height:1.35;color:var(--ink);border-left:1px solid var(--gold);padding-left:24px}
+
+/* method */
+.method{background:var(--ink);color:#f2f0eb;border-radius:var(--r);margin:0 var(--pad);padding:110px 0}
+.steps{display:grid;grid-template-columns:repeat(5,1fr);margin-top:70px;border-top:1px solid rgba(255,255,255,.16)}
+.steps div{padding:30px 24px 0 0}
+.steps b{display:block;font-family:var(--serif);font-weight:400;color:var(--gold);font-size:15px;margin-bottom:26px}
+.steps h4{font-size:21px;margin-bottom:10px}
+.steps p{color:rgba(242,240,235,.62);font-size:15px}
+.words{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:90px}
+.words div{border:1px solid rgba(255,255,255,.16);border-radius:var(--r);padding:40px 34px}
+.words h3{font-size:44px;margin-bottom:8px}
+.words div:nth-child(2) h3{font-family:var(--serif);font-style:italic;color:var(--gold)}
+.words p{color:rgba(242,240,235,.62)}
+.tech{display:flex;gap:12px;flex-wrap:wrap;margin-top:40px}
+.tech span{border:1px solid rgba(255,255,255,.22);border-radius:999px;padding:9px 18px;font-size:14px}
+
+/* testimonials */
+.testi{padding:140px 0}
+.t-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:22px;margin-top:60px}
+.t{background:#fff;border-radius:var(--r);padding:42px 36px;display:flex;flex-direction:column;justify-content:space-between;min-height:340px}
+.t q{font-family:var(--serif);font-size:20px;line-height:1.55;quotes:none}
+.t .who{margin-top:30px;display:flex;justify-content:space-between;align-items:center;font-size:14px;color:var(--muted)}
+.t .who b{color:var(--ink);font-weight:500;font-size:15px}
+.stars{color:var(--gold);letter-spacing:3px}
+
+/* contact */
+.contact{margin:0 var(--pad) var(--pad);border-radius:var(--r);overflow:hidden;display:grid;grid-template-columns:1fr 1fr;background:var(--sand)}
+.contact .info{padding:clamp(40px,6vw,90px)}
+.contact dl{margin-top:44px;display:grid;gap:26px}
+.contact dt{font-size:12px;letter-spacing:.24em;text-transform:uppercase;color:var(--gold);margin-bottom:4px}
+.contact dd{font-size:19px}
+.contact dd a:hover{color:var(--sage)}
+.contact .cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:46px}
+.contact .side{position:relative;min-height:520px}
+.contact .side img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.contact .side .circle{position:absolute;right:40px;bottom:40px}
+footer{padding:50px 0 40px;display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap;font-size:14px;color:var(--muted)}
+footer .logo{font-size:30px}
+
+/* modal */
+.modal{position:fixed;inset:0;z-index:100;background:rgba(30,24,18,.55);backdrop-filter:blur(6px);display:none;align-items:center;justify-content:center;padding:20px}
+.modal.on{display:flex}
+.m-box{background:var(--bg);border-radius:var(--r);max-width:1040px;width:100%;max-height:90vh;overflow:auto;display:grid;grid-template-columns:1fr 1.1fr;animation:pop .45s cubic-bezier(.2,.7,.2,1)}
+@keyframes pop{from{opacity:0;transform:translateY(24px)}}
+.m-box img{width:100%;height:100%;object-fit:cover;min-height:320px}
+.m-body{padding:52px 48px;position:relative}
+.m-body h3{font-size:42px;margin:10px 0 6px}
+.m-body .sub{font-family:var(--serif);font-style:italic;color:var(--gold);font-size:18px}
+.m-body .txt{margin-top:22px;color:var(--muted)}
+.m-body .txt p+p{margin-top:14px}
+.m-body .txt strong{color:var(--ink);font-weight:500}
+.m-body .row{display:flex;justify-content:space-between;align-items:center;margin-top:34px;padding-top:22px;border-top:1px solid var(--line);gap:16px;flex-wrap:wrap}
+.m-body .price{font-family:var(--serif);font-size:32px}
+.m-body .dur{font-size:14px;color:var(--muted)}
+.x{position:absolute;top:18px;right:18px;width:44px;height:44px;border-radius:50%;border:1px solid var(--line);background:none;font-size:22px;cursor:pointer;color:var(--ink)}
+
+/* reveal */
+.rv{opacity:0;transform:translateY(40px);transition:opacity 1s,transform 1s cubic-bezier(.2,.7,.2,1)}
+.rv.in{opacity:1;transform:none}
+
+@media (max-width:1000px){
+  .menu{display:none;position:absolute;top:96px;left:0;right:0;flex-direction:column;gap:0;background:var(--bg);padding:10px var(--pad) 24px;border-bottom:1px solid var(--line)}
+  .menu.open{display:flex}.menu a{padding:14px 0;border-bottom:1px solid var(--line)}
+  .burger{display:block}.nav .btn{display:none}
+  .intro,.about,.contact,.m-box{grid-template-columns:1fr}
+  .grid{grid-template-columns:1fr 1fr}
+  .steps{grid-template-columns:1fr 1fr}.steps div{margin-bottom:24px}
+  .t-grid,.words{grid-template-columns:1fr}
+}
+@media (max-width:640px){
+  .nav{height:76px}.menu{top:76px}.logo{font-size:30px}
+  .hero{grid-template-columns:1fr;height:auto;min-height:88vh}.hero .r{display:none}
+  .grid,.feat,.steps{grid-template-columns:1fr}
+  .card.feature,.card:last-child{grid-column:auto;aspect-ratio:4/5}
+  .benefit{grid-template-columns:1fr;min-height:760px}.benefit .r{display:none}
+  .orb{padding:36px}
+  .m-body{padding:40px 24px}
+  .intro,.rituals,.about,.testi{padding:80px 0}
+  .method{padding:80px 0}
+}
+@media (prefers-reduced-motion:reduce){.marq-t{animation:none}.rv{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <a href="#top" class="logo">ALMA<small>SKIN · RITUAL · WELLBEING</small></a>
+    <nav class="menu" id="menu">
+      <a href="#rituais">Skin Rituals</a>
+      <a href="#sobre">Sobre Nós</a>
+      <a href="#depoimentos">Depoimentos</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+    <a href="#contacto" class="btn btn-line">Marcar ritual <span class="arrow"></span></a>
+    <button class="burger" aria-label="Menu" onclick="document.getElementById('menu').classList.toggle('open')"><span></span><span></span></button>
+  </div>
+</header>
+
+<section class="hero" id="top">
+  <div class="l"><img src="img/hero-face.jpg" alt="Mulher de olhos fechados, pele luminosa"></div>
+  <div class="r"><img src="img/hero-spa.jpg" alt="Sala de tratamento ALMA"></div>
+  <div class="hero-c">
+    <span class="eyebrow">ALMA · Olhão</span>
+    <h1>Um ritual <em>de amor</em> por ti.</h1>
+    <p>Um espaço onde cuidar da pele se transforma num momento só teu.</p>
+    <a href="#rituais" class="circle">Descobrir<br>a ALMA<span class="arrow"></span></a>
+  </div>
+</section>
+
+<section class="wrap intro">
+  <div class="rv">
+    <span class="eyebrow">Facial aesthetics · Skin · Ritual · Wellbeing</span>
+    <h2 style="margin-top:22px">Descobre a tua pele. <em>Encontra o teu ritual.</em></h2>
+  </div>
+  <div class="rv">
+    <p class="lead">Cada pele tem uma história, necessidades diferentes e o seu próprio tempo. Na ALMA, começamos por ouvir, observar e compreender — e combinamos <strong style="color:var(--ink);font-weight:500">conhecimento, produtos ARTISTRY e tecnologia</strong> para criar um cuidado pensado para ti.</p>
+  </div>
+  <div class="feat rv" style="grid-column:1/-1">
+    <div><h4>Avaliação personalizada</h4><p>Tudo começa com o Skin Discovery e a análise SAM da tua pele.</p></div>
+    <div><h4>Tecnologia &amp; toque</h4><p>LEDterapia e Derma Architect, sempre que a tua pele o pede.</p></div>
+    <div><h4>Só estética facial</h4><p>Uma abordagem exclusivamente facial, personalizada e não invasiva.</p></div>
+  </div>
+</section>
+
+<div class="marq" aria-hidden="true">
+  <div class="marq-t">
+    <span>Skin.</span><span>Ritual.</span><span>Wellbeing.</span><span>Skin.</span><span>Ritual.</span><span>Wellbeing.</span>
+    <span>Skin.</span><span>Ritual.</span><span>Wellbeing.</span><span>Skin.</span><span>Ritual.</span><span>Wellbeing.</span>
+  </div>
+</div>
+
+<section class="wrap rituals" id="rituais">
+  <div class="r-head rv">
+    <div>
+      <span class="eyebrow">Skin Rituals</span>
+      <h2 style="margin-top:18px">A tua pele. <em>O teu ritual.</em></h2>
+    </div>
+    <p class="lead">Skin Discovery · Purify · Balance · Glow · Even · Age — e, para quem procura uma experiência totalmente personalizada, The ALMA Signature.</p>
+  </div>
+  <div class="grid" id="grid"></div>
+</section>
+
+<section class="benefit rv">
+  <div class="l"><img src="img/purify.jpg" alt=""></div>
+  <div class="r"><img src="img/200000047.jpg" alt="" style="object-position:80% 50%"></div>
+  <div class="orb">
+    <span class="eyebrow" style="color:#fff">✦ Benefício ALMA</span>
+    <div class="big" style="margin-top:16px">25% <em>de desconto</em></div>
+    <p>Em todos os tratamentos, como forma de reconhecimento e agradecimento, a:</p>
+    <ul><li>Profissionais de saúde</li><li>Forças de segurança</li></ul>
+    <p class="it" style="font-size:19px;margin:0 0 14px">Porque quem cuida dos outros também merece um momento para cuidar de si.</p>
+    <small>Mediante apresentação de comprovativo profissional válido.</small>
+  </div>
+</section>
+
+<section class="wrap about" id="sobre">
+  <div class="ph rv"><img src="img/petra.jpg" alt="Petra, fundadora da ALMA"><span class="sig">Petra, fundadora</span></div>
+  <div class="rv">
+    <span class="eyebrow">✦ Sobre a ALMA</span>
+    <h2 style="margin-top:18px">Antes de existir, <em>a ALMA já existia dentro de mim.</em></h2>
+    <p>A ALMA nasceu de um sonho: transformar um espaço que já existia em algo novo, mais especial, mais meu. Um lugar onde a estética facial pudesse ser vivida de uma forma diferente — com <strong>conhecimento, cuidado, calma e intenção</strong>.</p>
+    <p>Acredito que cuidar da pele vai muito além da aparência. Utilizo produtos <strong>ARTISTRY</strong> e tecnologias como <strong>SAM, LEDterapia e Derma Architect</strong>, escolhidas de acordo com as necessidades de cada pele. Mas existe algo que nenhuma máquina ou produto consegue substituir: <strong>o tempo que dedicamos a nós.</strong></p>
+    <blockquote>Para que cada mulher que entre aqui possa deixar o mundo lá fora. Respirar. Ser cuidada. Tu também mereces cuidar de ti.</blockquote>
+  </div>
+</section>
+
+<section class="method">
+  <div class="wrap">
+    <div class="rv">
+      <span class="eyebrow">✦ A minha forma de cuidar</span>
+      <h2 style="margin-top:18px;max-width:900px">Cada tratamento é pensado <em>para a tua pele.</em></h2>
+    </div>
+    <div class="steps rv">
+      <div><b>01</b><h4>Conhecer</h4><p>Antes de tratar, observo e compreendo.</p></div>
+      <div><b>02</b><h4>Personalizar</h4><p>Porque não existem duas peles iguais.</p></div>
+      <div><b>03</b><h4>Cuidar</h4><p>Com produtos, tecnologia e técnicas escolhidas com intenção.</p></div>
+      <div><b>04</b><h4>Respeitar</h4><p>A pele tem o seu próprio tempo. O cuidado também.</p></div>
+      <div><b>05</b><h4>Criar experiências</h4><p>Um tratamento pode transformar a pele e a forma como nos sentimos.</p></div>
+    </div>
+    <div class="words rv">
+      <div><h3>Skin</h3><p>A minha especialidade.</p></div>
+      <div><h3>Ritual</h3><p>A forma como escolho cuidar.</p></div>
+      <div><h3>Wellbeing</h3><p>Aquilo que quero que sintas quando sais daqui.</p></div>
+    </div>
+    <div class="tech rv"><span>ARTISTRY</span><span>SAM · Skin Analysis</span><span>LEDterapia</span><span>Derma Architect</span></div>
+  </div>
+</section>
+
+<section class="wrap testi" id="depoimentos">
+  <div class="r-head rv" style="margin-bottom:0">
+    <div><span class="eyebrow">Depoimentos</span><h2 style="margin-top:18px">Palavras <em>que ficam.</em></h2></div>
+    <p class="lead">A melhor forma de conhecer a ALMA é através de quem já a viveu.</p>
+  </div>
+  <div class="t-grid">
+    <div class="t rv"><q>Foi muito mais do que um tratamento de rosto. Senti que, durante aquela hora, estava realmente a cuidar de mim. Saí com a pele luminosa e, acima de tudo, com uma sensação maravilhosa de bem-estar.</q><div class="who"><b>Ana</b><span class="stars">★★★★★</span></div></div>
+    <div class="t rv"><q>Um espaço onde me senti verdadeiramente cuidada. Profissionalismo, calma e muito carinho em cada detalhe. A ALMA tornou o cuidado da pele num ritual que passei a valorizar.</q><div class="who"><span><b>Joana Carlos</b><br>Cliente há 2 anos</span><span class="stars">★★★★★</span></div></div>
+    <div class="t rv"><q>ALMA is such a beautiful experience. The atmosphere, the care and the attention to detail make you feel truly looked after. I can already feel the difference in my skin.</q><div class="who"><b>Olivia</b><span class="stars">★★★★★</span></div></div>
+  </div>
+</section>
+
+<section class="contact" id="contacto">
+  <div class="info rv">
+    <span class="eyebrow">Contacto</span>
+    <h2 style="margin-top:18px">Reserva <em>o teu momento.</em></h2>
+    <p class="lead" style="margin-top:20px">Visite o nosso estúdio ou reserve um dia. Ajustamos o nosso horário ao seu para ir de encontro às suas necessidades.</p>
+    <dl>
+      <div><dt>Morada</dt><dd><a href="https://maps.google.com/?q=Rua+Almirante+Reis+116A,+8700-364+Olh%C3%A3o" target="_blank" rel="noopener">Rua Almirante Reis 116 A<br>8700-364 Olhão</a></dd></div>
+      <div><dt>Telefone</dt><dd><a href="tel:+351916877438">916 877 438</a></dd></div>
+      <div><dt>E-mail</dt><dd><a href="mailto:almaskinritual@gmail.com">almaskinritual@gmail.com</a></dd></div>
+      <div><dt>Horário</dt><dd>Segunda a Sexta · 8h – 20h<br>Sábado e Domingo · 9h – 13h30</dd></div>
+    </dl>
+    <div class="cta">
+      <a class="btn btn-sage" href="https://wa.me/351916877438?text=Ol%C3%A1%20ALMA!%20Gostaria%20de%20marcar%20um%20ritual." target="_blank" rel="noopener">Marcar via WhatsApp <span class="arrow"></span></a>
+      <a class="btn btn-line" href="tel:+351916877438">Ligar</a>
+    </div>
+  </div>
+  <div class="side">
+    <img src="img/hero-spa.jpg" alt="Estúdio ALMA">
+    <a class="circle" href="https://wa.me/351916877438" target="_blank" rel="noopener">Marcar<br>agora<span class="arrow"></span></a>
+  </div>
+</section>
+
+<footer class="wrap">
+  <span class="logo">ALMA</span>
+  <span class="it" style="font-size:18px;color:var(--ink)">Um ritual de amor por ti.</span>
+  <span>© 2026 ALMA · Skin Ritual Wellbeing</span>
+</footer>
+
+<div class="modal" id="modal" onclick="if(event.target===this)closeM()">
+  <div class="m-box" role="dialog" aria-modal="true">
+    <img id="m-img" alt="">
+    <div class="m-body">
+      <button class="x" onclick="closeM()" aria-label="Fechar">×</button>
+      <span class="eyebrow" id="m-tag">Skin Ritual</span>
+      <h3 id="m-title"></h3>
+      <div class="sub" id="m-sub"></div>
+      <div class="txt" id="m-txt"></div>
+      <div class="row">
+        <div><div class="price" id="m-price"></div><div class="dur" id="m-dur"></div></div>
+        <a class="btn btn-sage" id="m-book" target="_blank" rel="noopener">Reservar este ritual <span class="arrow"></span></a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+const RITUALS = [
+  {id:'signature', name:'The ALMA Signature', tag:'✦ Exclusivo', sub:'O ritual completo · Personalizado · Exclusivo', price:'95 €', dur:'90–120 min', img:'face-relax.jpg', feature:true,
+   txt:['Uma experiência facial criada para ti, para a tua pele e para o momento que estás a viver.','Começamos por observar e compreender a pele através do <strong>SAM</strong> e, a partir dessa avaliação, construímos um ritual totalmente personalizado.','Limpeza, cuidado, toque e tecnologia unem-se num protocolo pensado ao detalhe, podendo integrar <strong>LEDterapia, Derma Architect, produtos ARTISTRY</strong> e outros recursos adequados à tua pele.','Aqui, não existe um protocolo igual para todas. Existe <strong>o teu ritual</strong>.']},
+  {id:'discovery', name:'Skin Discovery', tag:'Diagnóstico ALMA', sub:'Avaliação personalizada da pele', price:'25 €', dur:'Primeiro passo', img:'discovery.jpg',
+   txt:['Antes de tratar, queremos compreender.','Através da avaliação da pele, incluindo o recurso ao <strong>SAM</strong>, analisamos as suas características e necessidades para construir uma rotina e um protocolo de cuidados mais personalizado.','<strong>Ideal para:</strong> quem não sabe por onde começar ou quer compreender melhor a sua pele.']},
+  {id:'purify', name:'ALMA Purify', tag:'Limpeza Facial', sub:'Limpar · Equilibrar · Preparar', price:'55 €', dur:'75–90 min', img:'purify.jpg',
+   txt:['Um ritual de limpeza profunda pensado para remover impurezas, excesso de oleosidade e células acumuladas, deixando a pele mais limpa, fresca e luminosa.','Um momento para limpar, equilibrar e preparar a pele para receber cuidado.']},
+  {id:'balance', name:'ALMA Balance', tag:'Novidade', sub:'Cuidado facial para pele com acne', price:'65 €', dur:'Protocolo personalizado', img:'balance.jpg',
+   txt:['Um protocolo personalizado para peles com tendência acneica e imperfeições, respeitando o estado e as necessidades de cada pele.','O objetivo é cuidar do equilíbrio da pele <strong>sem a sobrecarregar</strong>.']},
+  {id:'glow', name:'ALMA Glow', tag:'Luminosidade', sub:'Luminosidade · Hidratação · Vitalidade', price:'60 €', dur:'75 min', img:'glow.jpg',
+   txt:['Um ritual facial pensado para devolver à pele uma aparência mais <strong>luminosa, hidratada e revitalizada</strong>.','Personalizamos o cuidado de acordo com as necessidades da pele, podendo integrar <strong>LEDterapia e tecnologia Derma Architect</strong>.','Ideal para peles com aspeto baço, cansado, desidratado ou sem luminosidade. Um momento para cuidar da pele. Um momento para voltar a ti.']},
+  {id:'even', name:'ALMA Even', tag:'Novidade', sub:'Uniformidade · Luminosidade · Cuidado', price:'70 €', dur:'75–90 min', img:'even.jpg',
+   txt:['Um ritual facial criado para peles com <strong>manchas, tom irregular e perda de luminosidade</strong>.','O tratamento combina cuidado personalizado com os recursos da ALMA, podendo integrar <strong>LEDterapia e Derma Architect</strong>, quando adequado.','Revelar uma pele mais uniforme, sem deixar de ser tua.']},
+  {id:'age', name:'ALMA Age', tag:'Anti-idade', sub:'Firmeza · Suavidade · Renovação', price:'70 €', dur:'75–90 min', img:'age.jpg',
+   txt:['Para peles que começam a revelar <strong>rugas, linhas de expressão e perda de firmeza</strong>.','Cuidar do envelhecimento da pele não significa apagar quem somos. Significa cuidar da sua qualidade, luminosidade e vitalidade, respeitando o seu tempo.','Envelhecer faz parte da nossa história. Cuidar de nós também.']},
+];
+const WA = 'https://wa.me/351916877438?text=';
+const grid = document.getElementById('grid');
+grid.innerHTML = RITUALS.map(r => `
+  <article class="card rv${r.feature ? ' feature' : ''}" data-id="${r.id}" tabindex="0">
+    <img src="img/${r.img}" alt="${r.name}" loading="lazy">
+    <span class="tag">${r.tag}</span>
+    <div class="glass">
+      <h3>${r.name}</h3><div class="sub">${r.sub}</div>
+      <div class="meta"><span>${r.dur}</span><span class="price">${r.price}</span></div>
+    </div>
+  </article>`).join('');
+
+const modal = document.getElementById('modal');
+const $ = id => document.getElementById(id);
+function openM(id){
+  const r = RITUALS.find(x => x.id === id); if(!r) return;
+  $('m-img').src = 'img/' + r.img; $('m-img').alt = r.name;
+  $('m-tag').textContent = r.tag; $('m-title').textContent = r.name; $('m-sub').textContent = r.sub;
+  $('m-txt').innerHTML = r.txt.map(p => `<p>${p}</p>`).join('');
+  $('m-price').textContent = r.price; $('m-dur').textContent = 'Duração: ' + r.dur;
+  $('m-book').href = WA + encodeURIComponent(`Olá ALMA! Gostaria de marcar o ritual ${r.name}.`);
+  modal.classList.add('on'); document.body.style.overflow = 'hidden';
+}
+function closeM(){ modal.classList.remove('on'); document.body.style.overflow = ''; }
+grid.addEventListener('click', e => { const c = e.target.closest('.card'); if(c) openM(c.dataset.id); });
+grid.addEventListener('keydown', e => { const c = e.target.closest('.card'); if(c && e.key === 'Enter') openM(c.dataset.id); });
+document.addEventListener('keydown', e => { if(e.key === 'Escape') closeM(); });
+document.querySelectorAll('.menu a').forEach(a => a.addEventListener('click', () => $('menu').classList.remove('open')));
+
+const io = new IntersectionObserver(es => es.forEach(e => { if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } }), {threshold:.12});
+document.querySelectorAll('.rv').forEach(el => io.observe(el));
+</script>
+</body>
+</html>
